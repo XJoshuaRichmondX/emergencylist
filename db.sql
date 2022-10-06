@@ -1,21 +1,25 @@
 DROP TABLE IF EXISTS customer;
+
     CREATE TABLE customer (
         customer_id serial,
         name text,
         phone text,
         total integer
-)
+);
 
 
-     DROP TABLE IF EXISTS order;
-     CREATE TABLE order (
-     order_id serial,
+DROP TABLE IF EXISTS servings;
+
+    CREATE TABLE servings (
+     serving_id serial,
      customer_id serial,
      price decimal,
      amount integer
-     )
+     );
 
-     INSERT INTO customer (name,num_units. owner_id) VALUES ('jimmy',2348885433 , ),
+     INSERT INTO customer (name,phone, total) 
+     VALUES 
+     ('jimmy','2348885433' , 3),
      ('ed', '4920347237', 2),
       ('rudy','1536193844', 3),
       ('phil','5924852039', 7),
