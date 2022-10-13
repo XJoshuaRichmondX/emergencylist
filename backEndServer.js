@@ -4,8 +4,8 @@ const express = require('express');
 const {Client} = require('pg');
 const PORT = 3005;
 const app = express();
-const CORS = require ('cors');
-app.use(CORS());
+const cors = require ('cors');
+app.use(cors());
 
 app.use(express.json());
 
@@ -29,7 +29,7 @@ app.get('/api/', (req,res) => {
 app.post('/api/', (req,res) => {
  let {contactname, phone, relationship} = req.body;
  try{ 
-     client.query (`INSERT INTO contactlist (contactname, phone, relationship) VALUES ($1, $2, $3)`, [contactname, phone, relationship])
+     client.query (`INSERT INTO contactlist (contactname, phone, relationship) VALUES ($1, $2, $3) Returning *`, [contactname, phone, relationship])
         res.send('Added') 
         }
         catch(err) {
@@ -47,7 +47,7 @@ app.post('/api/', (req,res) => {
      }
  }); 
 
-app.delete('/api/:customer_id', (req,res) => {
+ app.delete('/api/:customer_id', (req,res) => {
     try{
     client.query(`DELETE FROM contactlist WHERE customer_id = $1`, [req.params.customer_id]) 
         res.send('Deleted')
@@ -60,4 +60,3 @@ app.delete('/api/:customer_id', (req,res) => {
 app.listen(PORT, () => {
  console.log(`Our app is running on ${PORT}`)
 });
-showlist();
