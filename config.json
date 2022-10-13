@@ -1,5 +1,5 @@
 {
     "dev": {
-    "connectionString":"postgresql://postgres@localhost:5432/fullstack"
+    "connectionString":"postgresql://postgres@localhost:5432/1st-FullStack"
     }
 }

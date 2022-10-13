@@ -9,15 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Greyes90/1st-FullStack.git"
+    "url": "git+https://github.com/XJoshuRichmondX/emergencylist.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Greyes90/1st-FullStack/issues"
+    "url": "https://github.com/XJoshuaRicmondX/emergencylist/issues"
   },
-  "homepage": "https://github.com/Greyes90/1st-FullStack#readme",
+  "homepage": "https://github.com/XJoshuaRichmondX/emergencylist#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1",
     "nodemon": "^2.0.20",
     "pg": "^8.8.0"
